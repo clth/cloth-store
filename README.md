@@ -9,7 +9,7 @@ Home page description
 ---------------
 
 1) Slider Section 
-  > Can manage from Avartan Slider menu
+  * Can manage from Avartan Slider menu
 
 2) Advertisement section
 * Can managed from Pages > Home > Advertisement Section 
