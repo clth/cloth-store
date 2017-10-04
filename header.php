@@ -21,6 +21,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="hidden">
+<?php
+	the_post_thumbnail();
+	add_editor_style();
+?>
+</div>
 <div id="page" class="site">
 	<header class="header">
 		<!-- Site Logo -->
@@ -34,6 +40,7 @@
 					 ?>	<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 					<?php }
 					?>
+					
 				</div><!-- .site-branding -->
 			</div>
 		</div>
@@ -65,9 +72,8 @@
 				<div class="header-cart pull-right">
 					<?php global $woocommerce; ?>
 						<a class="header-cart-icon" href="<?php echo $woocommerce->cart->get_cart_url(); ?>"
-						title="<?php _e('Cart View', 'woothemes'); ?>">
-						<?php echo sprintf(_n('%d', $woocommerce->cart->cart_contents_count, 'woothemes'),
-						 $woocommerce->cart->cart_contents_count);?>
+						title="<?php __('Cart View', 'cloth-store'); ?>">
+						<?php echo $woocommerce->cart->cart_contents_count;?>
 						</a>
 					<i class="fa fa-shopping-cart"></i>
 				</div>

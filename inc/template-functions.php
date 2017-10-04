@@ -58,8 +58,8 @@ class Woocommerce_product_custom_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'woocommerce_product_custom_widget', // Base ID
-			esc_html__( 'Woocommerce Product Listing', 'product_custom_widget' ), // Name
-			array( 'description' => esc_html__( 'Display Products', 'product_custom_widget' ), ) // Args
+			esc_html__( 'Woocommerce Product Listing', 'cloth-store' ), // Name
+			array( 'description' => esc_html__( 'Display Products', 'cloth-store' ), ) // Args
 		);
 	}
 
@@ -172,19 +172,19 @@ class Woocommerce_product_custom_widget extends WP_Widget {
 		$adv_side = $instance['adv_side'];
 		?>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'best_selling_product' ); ?></label> 
+			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'cloth-store' ); ?></label> 
 			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		
 		<p>
-			 <label for="<?php echo esc_attr( $this->get_field_id( 'product_display' ) ); ?>"><?php esc_attr_e( 'No. of Products:', 'product_custom_widget' ); ?></label> 
+			 <label for="<?php echo esc_attr( $this->get_field_id( 'product_display' ) ); ?>"><?php esc_attr_e( 'No. of Products:', 'cloth-store' ); ?></label> 
 			 <input class="widefat" type ="number" id ="<?php echo esc_attr( $this->get_field_id( 'product_display' ) ); ?>" name ="<?php echo esc_attr( $this->get_field_name( 'product_display' ) ); ?>" value="<?php echo esc_attr( $product_display ); ?>"/>
 		</p>
 		
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'product_category' ) ); ?>"><?php esc_attr_e( 'Category:', 'product_custom_widget' ); ?></label> 
+			<label for="<?php echo esc_attr( $this->get_field_id( 'product_category' ) ); ?>"><?php esc_attr_e( 'Category:', 'cloth-store' ); ?></label> 
 			<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'product_category' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'product_category' ) ); ?>">
-				<option value=""><?php esc_attr_e( 'All Category', 'product_custom_widget' ); ?></option>
+				<option value=""><?php esc_attr_e( 'All Category', 'cloth-store' ); ?></option>
 				
 				<?php
 					$product_categories = get_terms( 'product_cat' );
@@ -203,30 +203,30 @@ class Woocommerce_product_custom_widget extends WP_Widget {
         </p>
 		
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'list_product_type' ) ); ?>"><?php esc_attr_e( 'Show:', 'product_custom_widget' ); ?></label> 
+			<label for="<?php echo esc_attr( $this->get_field_id( 'list_product_type' ) ); ?>"><?php esc_attr_e( 'Show:', 'cloth-store' ); ?></label> 
 			<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'list_product_type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'list_product_type' ) ); ?>">
-				<option value="1" <?php echo ($list_product_type==='1')?'selected':''; ?>><?php esc_attr_e( 'New Products', 'product_custom_widget' ); ?></option>
-				<option value="2" <?php echo ($list_product_type==='2')?'selected':''; ?>><?php esc_attr_e( 'Best Selling', 'product_custom_widget' ); ?></option>
+				<option value="1" <?php echo ($list_product_type==='1')?'selected':''; ?>><?php esc_attr_e( 'New Products', 'cloth-store' ); ?></option>
+				<option value="2" <?php echo ($list_product_type==='2')?'selected':''; ?>><?php esc_attr_e( 'Best Selling', 'cloth-store' ); ?></option>
 			</select>
         </p>
 		
 		<p>	
-			<label for="<?php echo esc_attr( $this->get_field_id( 'adv_image' ) ); ?>"><?php esc_attr_e( 'Advertisement Image:', 'product_custom_widget' ); ?></label> 
+			<label for="<?php echo esc_attr( $this->get_field_id( 'adv_image' ) ); ?>"><?php esc_attr_e( 'Advertisement Image:', 'cloth-store' ); ?></label> 
 		<?php
 			pco_image_field( $this, $instance, array( 'field' => 'adv_image') );
 		?>
 		</p>
 		
 		<p>	
-			<label for="<?php echo esc_attr( $this->get_field_id( 'adv_link' ) ); ?>"><?php esc_attr_e( 'Advertisement Link:', 'product_custom_widget' ); ?></label> 
+			<label for="<?php echo esc_attr( $this->get_field_id( 'adv_link' ) ); ?>"><?php esc_attr_e( 'Advertisement Link:', 'cloth-store' ); ?></label> 
 			<input class="widefat" type ="url" id ="<?php echo esc_attr( $this->get_field_id( 'adv_link' ) ); ?>" name ="<?php echo esc_attr( $this->get_field_name( 'adv_link' ) ); ?>" value="<?php echo esc_attr( $adv_link ); ?>"/>
 		</p>
 		
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id( 'adv_side' ) ); ?>"><?php esc_attr_e( 'Show on:', 'product_custom_widget' ); ?></label> 
+			<label for="<?php echo esc_attr( $this->get_field_id( 'adv_side' ) ); ?>"><?php esc_attr_e( 'Show on:', 'cloth-store' ); ?></label> 
 			<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'adv_side' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'adv_side' ) ); ?>">
-				<option value="1" <?php echo ($adv_side==='1')?'selected':''; ?>><?php esc_attr_e( 'Right', 'product_custom_widget' ); ?></option>
-				<option value="2" <?php echo ($adv_side==='2')?'selected':''; ?>><?php esc_attr_e( 'Left', 'product_custom_widget' ); ?></option>
+				<option value="1" <?php echo ($adv_side==='1')?'selected':''; ?>><?php esc_attr_e( 'Right', 'cloth-store' ); ?></option>
+				<option value="2" <?php echo ($adv_side==='2')?'selected':''; ?>><?php esc_attr_e( 'Left', 'cloth-store' ); ?></option>
 			</select>
        </p>
 		<?php
