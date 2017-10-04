@@ -1,0 +1,133 @@
+#adv-section{
+	margin-top: 10px;
+	img{
+		width: 100%;
+	}
+}
+
+#new-products-section{
+	margin-top: 60px;
+	float: left;
+	width: 100%;
+}
+.products-container{
+	margin-top: 0;
+	float: left;
+	width: 100%;
+	.single-product{
+		overflow: hidden;
+		.product-wrapper{
+			background-color: #ffffff;
+			min-height: 340px;
+			@media(max-width: 767px){
+				max-width: 295px;
+				margin: 10px auto 10px;;
+			}
+			&:hover{
+				.product-img{
+					img{
+						transform: scale(0.9);
+					}
+				}
+			}
+			.product-img{
+				padding: 20px;
+				min-height: 240px;
+				height: 240px;
+			    position: relative;
+			    .img-wrap{
+			    	left: 50%;
+				    position: absolute;
+				    transform: translate(-50%, -50%);
+				    top: 50%;
+				    width: 100%;
+				    img{
+				    	@include transition(0.60s);
+				    	margin: 0 auto;
+				    	width: auto;
+				    }
+			    }
+			}
+			.product-detail{
+				border-top: 1px solid #eaf1f2;
+				padding-top: 30px;
+				position: relative;
+				.add-to-cart{
+					position: absolute;
+					height: 40px;
+					width: 40px;
+					background-color: #1eb089;
+					right: 20px;
+					top: -20px;
+					i{
+						color: #ffffff;
+						font-size: 20px;
+	    				padding: 9px;
+					}
+				}
+				.product-name{
+					@include montserratlight(12px, #818181, 18px);
+					text-transform: uppercase;
+				}
+				.product-price{
+					@include montserratregular(18px, #818181, 26px);
+					margin-top: 0;
+					.sale-price{
+						@include montserratregular(12px, #ff4d36, 18px);
+						text-decoration: line-through;
+					}
+				}
+			}
+		}
+	}
+	
+}
+.owl-theme {
+	.owl-nav.disabled+.owl-dots{
+		margin-top: 25px;
+	}
+	.owl-dots{
+		.owl-dot{
+			span{
+				width: 9px;
+				height: 8px;
+				backgorund: #d3d3d3;
+				border-radius: 0;
+				margin-right: 3px;
+			}
+			&.active{
+				span{
+					background-color: #7db9e8;
+				}
+			}
+		}
+	}
+}
+.ajax_add_to_cart{
+	background-color: transparent !important;
+	padding: 0 !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	outline: none !important;
+	&:hover, &:focus, &:active{
+		background-color: transparent !important;
+		border: 0 !important;
+		box-shadow: none !important;
+		outline: none !important;
+	}
+}
+.woocommerce #respond input#submit.added::after, .woocommerce a.button.added::after, .woocommerce button.button.added::after, .woocommerce input.button.added::after {
+    content: '\e017';
+    margin-left: .53em;
+    position: absolute;
+    left: 10px;
+    font-size: 9px;
+    top: 3px;
+}
+.added_to_cart.wc-forward{
+	display: block;
+    font-size: 12px;
+    font-weight: normal;
+    width: 100px;
+    margin-left: -30px;
+}

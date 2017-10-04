@@ -1,0 +1,133 @@
+footer{
+	background-color: $footer-bg;
+	min-height: 515px;
+	padding-top: 60px;
+	margin-top: 100px;
+	@media(max-width: 767px){
+		min-height: auto;
+		padding-top: 20px;
+		margin-top: 50px;
+	}
+	.title{
+		@include montserratregular(18px, #9a9a9a , 24px);
+		text-transform: uppercase;
+		margin-bottom: 25px;
+		margin-top: 0;
+		@media(max-width: 767px){
+			margin-top: 10px;
+		}
+	}
+	.left-footercontent{
+		@media(min-width: 767px) and (max-width: 991px){
+			margin-bottom: 20px;
+		}
+		.custom-logo-link{
+			margin-bottom: 30px;
+		}
+		@include montserratlight(12px, #818181 , 20px);
+		p{
+			margin-bottom: 40px;
+		}
+		.follow-us{
+			
+			li{
+				display: inline-block;
+				margin-right: 5px;
+				a{
+					display: block;
+					font-size: 21px;
+					width: 48px;
+					height: 50px;
+					color: #ffffff;
+					opacity: 0.15;
+					border: 2px solid #ffffff;
+					text-align: center;
+					padding-top: 12px;
+					@include transition(0.4s);
+					margin-bottom: 5px;
+					i{
+						color: #ffffff;
+					}
+					&:hover{
+						opacity: 1;
+					}
+				}
+				
+			}
+		}
+	}
+	.footer-rightcontent{
+		@media(max-width: 1199px){
+			width: 100%;
+			.newsletter{
+				text-align: center;
+				.input-email{
+					width: 100%;
+				}
+				.newsletter-submit{
+					float: none;
+					margin-top: 20px;
+				}
+			}
+		}
+		@media(max-width: 767px){
+				margin-top: 10px;
+			}
+		float: right;
+		.newsletter{
+			.input-email{
+				min-width: 620px;
+				min-height: 50px;
+				border-radius: 0;
+				float: left;
+				@include montserratlight(11px, #aeaeae , 24px);
+				padding-left: 20px;
+				@media(max-width: 767px){
+					min-width: 100%;
+				}
+			}
+			.newsletter-submit{
+				min-width: 202px;
+				min-height: 50px;
+				background: #1eb089;
+				@include montserratregular(12px, #ffffff , 24px);
+				border: 0;
+				float: left;
+				margin: 0;
+				border-radius: 0;
+				@media (max-width: 1199px){
+					float: none;
+					margin-top: 20px;
+			}
+		}
+	}
+	}
+	.footer-menu-content{
+		margin-top: 55px;
+		float: left;
+		width: 100%;
+		ul{
+			margin-top: -10px;
+		li{
+		a{
+			@include montserratlight(11px, #818181 , 24px);
+			@include transition(0.4s);
+				&:before{
+					content: "\f105   ";
+					font-family: "FontAwesome";
+				}
+				&:hover{
+				color: #ffffff;
+				}
+			}
+		}
+		}
+	}
+	.site-info, .site-info a{
+		@include montserratlight(12px, #818181 , 24px);
+		min-height: 100px;
+		padding-top: 40px;
+		margin-top: 60px;
+		border-top: 1px solid rgba(255,255,255,0.1);
+	}
+}

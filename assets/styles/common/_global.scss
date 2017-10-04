@@ -1,0 +1,114 @@
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url('../fonts/Montserrat-Regular.eot');
+	src: url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Montserrat-Light';
+	src: url('../fonts/Montserrat-Light.eot');
+	src: url('../fonts/Montserrat-Light.woff') format('woff'), url('../fonts/Montserrat-Light.ttf') format('truetype'), url('../fonts/Montserrat-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+		font-family:'FontAwesome';
+		src:url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+		src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),
+		url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'),
+		url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),
+		url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+		font-weight:normal;
+		font-style:normal
+	}
+//@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Montserrat:400,700|Source+Sans+Pro:400,600');
+body{
+	font-family:'Montserrat-Regular',Sans-Serif;
+	background-image: url($bg-path+'body-bg.png');
+	background-repeat: repeat;
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	a{
+		&:hover,&:focus, &:active{
+			text-decoration: none;
+			outline: none;
+		}
+	}
+}
+.no-padding{
+	padding: 0;
+}
+.padding-10{
+	padding: 0 10px;
+}
+.section-title{
+	@include montserratregular(24px, #818181, 24px);
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 30px;
+	@media(max-width: 767px){
+		font-size: 26px;
+		display: block;
+		text-align: center;
+	}
+}
+.color-box{
+	width: 9px;
+	height: 19px;
+	display: block;
+    float: left;
+    margin-right: 2px;
+	@media(max-width: 767px){
+		margin-right: 0px;
+		float: none;
+		display: inline-block;
+	}
+    &:last-child{
+    	margin-right: 20px;
+		@media(max-width: 767px){
+			margin-right: -5px;
+		}
+    }
+	&.green{
+		background-color: #1eb089;
+	}
+	&.blue{
+		background-color: #7db9e8;
+	}
+	&.purple{
+		background-color: #7c49ab;
+	}
+}
+.adv-image{
+	position: relative;
+	padding: 0;
+	.corner-img {
+	    position: absolute;
+	    left: 20px;
+	    right: 20px;
+	    bottom: 20px;
+	    top: 20px;
+	    background-image: url($bg-path+'left-top.png'), url($bg-path+'left-bottom.png'), url($bg-path+'right-top.png'), url($bg-path+'right-bottom.png');
+	    background-position: left top, left bottom, right top, right bottom;
+	    background-repeat: no-repeat;
+	    @include transition(0.60s);
+	}
+	&:hover{
+		.corner-img{
+			top: 10px;
+			left: 10px;
+			bottom: 10px;
+			right: 10px;
+		}
+	}
+}
+@media (min-width: 1280px){
+	.container{
+		width: 1270px;
+	}
+}

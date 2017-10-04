@@ -1,0 +1,33 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+$bg-path:        		"../images/";
+$menu-font-size:		15px;
+
+// Colors
+$brand-primary:         #caad6a;
+$footer-bg:				#1b1d1c;
+
+//Font Family
+$spro-regular:	'Source Sans Pro',Sans-Serif;
+$montserrat-regular: 'Montserrat-Regular',Sans-Serif;
+$montserrat-light: 'Montserrat-Light',Sans-Serif;
+
+@mixin montserratlight($size, $color, $lh) {
+   font-family: $montserrat-light;
+   font-size: $size;
+   color: $color;
+   line-height: $lh;
+}
+@mixin montserratregular($size, $color, $lh) {
+   font-family: $montserrat-regular;
+   font-size: $size;
+   color: $color;
+   line-height: $lh;
+   margin-top: 10px;
+}
+@mixin transition($duration) {
+   transition: $duration all;
+    -ms-transition: $duration all;
+    -webkit-transition: $duration all;
+    -moz-transition: $duration all;
+}

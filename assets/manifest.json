@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+	"plugin.min.js": {
+      "files": [
+        "scripts/owl.carousel.min.js",
+		"scripts/jquery-scrolltofixed-min.js"
+      ]
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+	"plugin.min.css": {
+      "files": [
+        "styles/owl.carousel.min.css",
+		"styles/owl.theme.default.min.css"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    }
+  },
+  "config": {
+    "devUrl": ""
+  }
+}
